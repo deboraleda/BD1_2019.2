@@ -49,15 +49,3 @@ SELECT dname FROM department WHERE NOT EXISTS (SELECT dnum FROM project WHERE dn
 --Q15
 SELECT DISTINCT fname, lname FROM employee AS e, works_on WHERE essn = ssn AND ssn <> '123456789' AND NOT EXISTS ((SELECT pno FROM works_on WHERE essn = '123456789')
 EXCEPT(SELECT pno FROM works_on WHERE essn = e.ssn));
-
-
-
-
-
-
-
-
-
-
-
-
